@@ -79,7 +79,6 @@ qubitcoin_miner_SOURCES = \
   algo/fugue/sph_fugue.c \
   algo/fugue/fugue-aesni.c \
   algo/hamsi/sph_hamsi.c \
-  algo/hamsi/hamsi-hash-4way.c \
   algo/haval/haval.c \
   algo/haval/haval-hash-4way.c \
   algo/jh/sph_jh.c \
