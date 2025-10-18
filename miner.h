@@ -190,13 +190,13 @@ static inline uint32_t swab32(uint32_t x)
 #ifdef WANT_BUILTIN_BSWAP
    return __builtin_bswap32(x);
 #else
-   return ( ( (x) << 24 ) & 0xff000000u ) | ( ( (x) <<  8 ) & 0x00ff0000u )
-        | ( ( (x) >>  8 ) & 0x0000ff00u ) | ( ( (x) >> 24 ) & 0x000000ffu )
-
-
-//   return bswap_32(v);
+   return (((x) << 24) & 0xff000000u) |
+          (((x) <<  8) & 0x00ff0000u) |
+          (((x) >>  8) & 0x0000ff00u) |
+          (((x) >> 24) & 0x000000ffu);
 #endif
 }
+
 
 // Swap any two variables of the same type without using a temp
 #define swap_vars(a,b) a^=b; b^=a; a^=b;
